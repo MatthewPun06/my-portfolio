@@ -1,11 +1,10 @@
 import Fuzhou from './assets/FuZhouNight.jpeg';
 import Shifen from './assets/ShifenWaterfall.jpeg';
-import Menu from './Menu.js';
-import Contact from './ContactFooter.js';
+import Resume from './Resume.js';
+import Devlog from './Devlog.js';
 export default function Page() {
   return (
     <div style={{color: '#fafaff', fontFamily: 'Oxygen, sans-serif', position: 'relative', width : '100%', scrollbarGutter: 'stable', overflow: 'hidden'}}>
-      <Menu/>
       <img
         src={Fuzhou}
         alt="Fuzhou Night"
@@ -31,7 +30,7 @@ export default function Page() {
           }}
         />
         <div style = {{display: 'inline-flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '10px'}}>
-        <h1 style={{padding: '10px', textAlign: 'left', color: '#1a1a2a', fontSize: '35px', fontWeight: 'bold', fontFamily: 'MonoSpace' }}>
+        <h1 style={{padding: '10px', textAlign: 'left', color: '#1a1a2a', fontSize: '30px', fontWeight: 'bold', fontFamily: 'MonoSpace' }}>
           Hi! I'm Matthew Pun
           <br/><br/>
           <p style={{fontSize: '17px', fontWeight: 'normal', marginTop: '10px', color: '#1a1a2a', lineHeight: '2', overflow: 'hidden', maxHeight: '350px'}}>
@@ -47,8 +46,9 @@ export default function Page() {
         </div>
         </div>
       </div>
-      <Contact/>
 
+      <Resume/>
+      <Devlog/>
     </div>
   )
 }

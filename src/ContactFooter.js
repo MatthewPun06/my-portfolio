@@ -6,19 +6,18 @@ export default function Page() {
     const form = useRef();
     const sendEmail = (e) => {
     e.preventDefault();
-    alert('Message sent successfully!');
-    // emailjs.sendForm('matthewpun06', 'contact-template', e.target, '4lZyAu1gblxvVTq9v')
-    //   .then(() => {
-    //     alert('Message sent successfully!');
-    //   }, () => {
-    //     alert('Error sending message.');
-    //   });
+    emailjs.sendForm('matthewpun06', 'contact-template', e.target, '4lZyAu1gblxvVTq9v')
+      .then(() => {
+        alert('Message sent successfully!');
+      }, () => {
+        alert('Error sending message.');
+      });
   };
     return (
         <div style={{color: '#fafaff', fontFamily: 'Monospace', position: 'relative', width : '100%', scrollbarGutter: 'stable', overflow: 'hidden'}}>
-            <h1 style={{textAlign: 'center', padding: '20px', fontSize: '34px', paddingBottom: '0px'}}>
+            <h1 style={{textAlign: 'center', paddingTop: '50px', fontSize: '34px', paddingBottom: '0px'}}>
                 Contact 
-                <hr style={{marginLeft: '100px', marginRight: '100px'}}/>
+                <hr style={{marginLeft: '120px', marginRight: '120px'}}/>
             </h1>
             <div style={{display: 'flex', justifyContent: 'right', flexDirection: 'column', alignItems: 'top', marginTop: '0px', padding: '20px'}}>
                     <form ref={form} onSubmit={sendEmail}>

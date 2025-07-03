@@ -1,5 +1,6 @@
 import './App.css'
-export default function Page() {
+import App, { PageName } from './App.js';
+export default function Page({setCurrentPage}) {
   return (
     <div style={{
         backgroundColor: '#1a1a2a',
@@ -16,22 +17,22 @@ export default function Page() {
             justifyContent: 'space-between',
             alignItems: 'center',
             }}>
-            <span>p o r t f o l i o</span>
+            <button className = {'my-button'} style = {{fontFamily: 'Oxygen', marginLeft: '0px', fontSize: '32px'}} onClick={() => setCurrentPage(PageName.HOME)}>p o r t f o l i o</button>
             <div style={{
                 display: 'flex',
                 justifyContent: 'space-between',
                 alignItems: 'center',
                 }}>
-                <button className={'my-button'}>
+                <button className={'my-button'} onClick={() => setCurrentPage(PageName.RESUME)}>
                     r é s u m é
                 </button>
-                <button className={'my-button'}>
+                <button className={'my-button'} onClick={() => setCurrentPage(PageName.RESUME)}>
                     p r o j e c t s
                 </button>
-                <button className={'my-button'}>
+                <button className={'my-button'} onClick={() => setCurrentPage(PageName.DEVLOG)}>
                     d e v l o g
                 </button>
-                <button className={'my-button'}>
+                <button className={'my-button'} onClick={() => setCurrentPage(PageName.CONTACT)}>
                     c o n t a c t
                 </button>
             </div>
