@@ -1,6 +1,7 @@
 import Fuzhou from './assets/FuZhouNight.jpeg';
 import Shifen from './assets/ShifenWaterfall.jpeg';
-import Menu from './Menu.tsx';
+import Menu from './Menu.js';
+import Contact from './ContactFooter.js';
 export default function Page() {
   return (
     <div style={{color: '#fafaff', fontFamily: 'Oxygen, sans-serif', position: 'relative', width : '100%', scrollbarGutter: 'stable', overflow: 'hidden'}}>
@@ -46,6 +47,7 @@ export default function Page() {
         </div>
         </div>
       </div>
+      <Contact/>
 
     </div>
   )
