@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Home from './pages/Home.tsx';
+// import About from './pages/About';
 
 function App() {
+  const [currentPage, setCurrentPage] = useState("Home");
+
+  const renderPage = () => {
+    switch (currentPage) {
+      case "Home":
+        return <Home setCurrentPage={setCurrentPage} />;
+      case "About":
+        // return <About setCurrentPage={setCurrentPage} />;
+      default:
+        return <Home setCurrentPage={setCurrentPage} />;
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {renderPage()}
     </div>
   );
 }
