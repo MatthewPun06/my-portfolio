@@ -46,9 +46,7 @@ export default function Page() {
         </div>
         </div>
       </div>
-
       <Resume/>
-      <Devlog/>
     </div>
   )
 }
