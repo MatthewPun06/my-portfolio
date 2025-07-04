@@ -1,17 +1,20 @@
 {
   "files": {
-    "main.css": "/my-portfolio/static/css/main.592135e3.css",
-    "main.js": "/my-portfolio/static/js/main.91244c17.js",
+    "main.css": "/my-portfolio/static/css/main.3d3d770b.css",
+    "main.js": "/my-portfolio/static/js/main.5e62d6c9.js",
     "static/js/453.96453769.chunk.js": "/my-portfolio/static/js/453.96453769.chunk.js",
     "static/media/ShifenWaterfall.jpeg": "/my-portfolio/static/media/ShifenWaterfall.c941612e7628a0003e00.jpeg",
     "static/media/FuZhouNight.jpeg": "/my-portfolio/static/media/FuZhouNight.7dd867620bd5a4b04914.jpeg",
+    "static/media/hometown.jpeg": "/my-portfolio/static/media/hometown.b3d6f0aa2f37b812cfa4.jpeg",
+    "static/media/hometown2.jpeg": "/my-portfolio/static/media/hometown2.3bc725d54b87cec2e945.jpeg",
+    "static/media/hometownmap.jpeg": "/my-portfolio/static/media/hometownmap.3acef3864a9c0ed757b2.jpeg",
     "index.html": "/my-portfolio/index.html",
-    "main.592135e3.css.map": "/my-portfolio/static/css/main.592135e3.css.map",
-    "main.91244c17.js.map": "/my-portfolio/static/js/main.91244c17.js.map",
+    "main.3d3d770b.css.map": "/my-portfolio/static/css/main.3d3d770b.css.map",
+    "main.5e62d6c9.js.map": "/my-portfolio/static/js/main.5e62d6c9.js.map",
     "453.96453769.chunk.js.map": "/my-portfolio/static/js/453.96453769.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.592135e3.css",
-    "static/js/main.91244c17.js"
+    "static/css/main.3d3d770b.css",
+    "static/js/main.5e62d6c9.js"
   ]
 }
