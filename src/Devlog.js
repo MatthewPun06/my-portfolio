@@ -1,4 +1,4 @@
-import React, { useRef} from "react"
+import React, { useRef, useEffect} from "react"
 import hometown from './assets/devlog/hometown.jpeg'
 import hometown2 from './assets/devlog/hometown2.jpeg'
 import hometownmap from './assets/devlog/hometownmap.jpeg'
@@ -10,9 +10,29 @@ const blue = '#5aaaff';
 const purple = '#a3a3ff'
 export default function Page() {
     const scrollRef = useRef(null);
+    const elementRef = useRef(null)
+    var scale = window.innerWidth / 1980
+    const initialHeight = 800 * scale;
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth
+      const baseWidth = 1980
+        scale = width / baseWidth
+
+      if (elementRef.current) {
+        elementRef.current.style.transform = `scale(${scale})`
+        elementRef.current.style.transformOrigin = "top left"
+      }
+    }
+
+    window.addEventListener("resize", handleResize)
+    handleResize() // run once at load
+
+    return () => window.removeEventListener("resize", handleResize)
+  }, [])
     return (
-        <div ref={scrollRef} onClick = {() => scrollRef.current.scrollTo({ left: Math.floor((scrollRef.current.scrollLeft + 1900)/1900)*1900 % 5700, behavior: "smooth"})} style={{position: 'relative', marginLeft: '5%', height: '800px', overflowX: 'scroll', fontFamily: 'Monospace, sans-serif'}}>
-            <div className="parallaxScreen">
+        <div ref={scrollRef} onClick = {() => scrollRef.current.scrollTo({ left: Math.floor((scrollRef.current.scrollLeft + 1900)/1900)*1900 % 5700, behavior: "smooth"})} style={{position: 'relative', marginLeft: '5%', marginRight: '5%', overflowX: 'scroll', fontFamily: 'Monospace, sans-serif', scale: '1'}}>
+            <div style = {{height: `${initialHeight}px`}} className="parallaxScreen" ref={elementRef} id = "parallax-page" >
                 {/* First Page (6/30 UI and Battle System) */}
                 <div style = {{position: "absolute"}}>
                     {/* Slope Design and Header */}
@@ -238,5 +258,6 @@ export default function Page() {
                 </div>
             </div>
         </div>
+
     )
 }

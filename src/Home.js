@@ -2,7 +2,9 @@ import Fuzhou from './assets/FuZhouNight.jpeg';
 import Shifen from './assets/ShifenWaterfall.jpeg';
 import Resume from './Resume.js';
 import Devlog from './Devlog.js';
+import React, { useEffect, useState, useRef} from "react"
 export default function Page() {
+
   return (
     <div style={{color: '#fafaff', fontFamily: 'Oxygen, sans-serif', position: 'relative', width : '100%', scrollbarGutter: 'stable', overflow: 'hidden'}}>
       <img
@@ -17,21 +19,20 @@ export default function Page() {
         }}
       />
 
-      <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '925px', margin: '0', overflow: 'hidden'}}>
-        <div style={{display: 'flex', alignItems: 'center', width: '800px', height: '500px', backgroundColor: '#fafaff', color: '#1a1a2a', fontFamily: 'Oxygen', position: 'relative', padding: '15px', borderRadius: '10px'}}>
+      <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '925px', margin: '0', overflow: 'scroll'}}>
+        <div style={{display: 'flex', alignItems: 'center', maxWidth: '800px', maxheight: '500px', backgroundColor: '#fafaff', color: '#1a1a2a', fontFamily: 'Oxygen', position: 'relative', padding: '15px', borderRadius: '10px'}}>
         <img
           src={Shifen}
           alt="Shifen Waterfall"
           style={{
-            height: '500px',
-            width: 'auto',
+            objectFit: 'contain',
+            maxWidth: '45%',
             left: 0,
           }}
         />
-        <div style = {{display: 'inline-flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '10px'}}>
-        <h1 style={{padding: '10px', textAlign: 'left', color: '#1a1a2a', fontSize: '30px', fontWeight: 'bold', fontFamily: 'MonoSpace' }}>
+        <div style = {{display: 'inline-flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', paddingLeft: '10px', paddingRight: '10px'}}>
+        <h1 style={{paddingLeft: '10px', paddingRight: '10px', textAlign: 'left', color: '#1a1a2a', fontSize: '30px', fontWeight: 'bold', fontFamily: 'MonoSpace' }}>
           Hi! I'm Matthew Pun
-          <br/><br/>
           <p style={{fontSize: '17px', fontWeight: 'normal', marginTop: '10px', color: '#1a1a2a', lineHeight: '2', overflow: 'scroll', maxHeight: '300px'}}>
             Welcome to my portfolio! 
             
