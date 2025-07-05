@@ -11,15 +11,17 @@ const purple = '#a3a3ff'
 export default function Page() {
     const scrollRef = useRef(null);
     const elementRef = useRef(null)
-    var scale = window.innerWidth / 1980
-    const initialHeight = 800 * scale;
-    var pagewidth;
+    const baseWidth = 1800
+    var scale = window.innerWidth / baseWidth
+    var height = 800 * scale;
+    const pagenumber = 3;
+    var pagewidth; 
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth
-      const baseWidth = 1900
         scale = width / baseWidth
-        pagewidth = 1900 * scale;
+        pagewidth = baseWidth * scale;
+        height = 800 * scale;
 
       if (elementRef.current) {
         elementRef.current.style.transform = `scale(${scale})`
@@ -33,10 +35,10 @@ export default function Page() {
     return () => window.removeEventListener("resize", handleResize)
   }, [])
     return (
-        <div ref={scrollRef} onClick = {() => scrollRef.current.scrollTo({ left: Math.floor((scrollRef.current.scrollLeft + pagewidth)/pagewidth)*pagewidth % (pagewidth * 3), behavior: "smooth"})} style={{position: 'relative', marginLeft: '5%', marginRight: '5%', overflowX: 'scroll', fontFamily: 'Monospace, sans-serif', scale: '1'}}>
-            <div style = {{height: `${initialHeight}px`}} className="parallaxScreen" ref={elementRef} id = "parallax-page" >
+        <div ref={scrollRef} onClick = {() => scrollRef.current.scrollTo({ left: Math.floor((scrollRef.current.scrollLeft + pagewidth)/pagewidth)*pagewidth % (pagewidth * pagenumber), behavior: "smooth"})} style={{position: 'relative', marginLeft: '5%', marginRight: '5%', overflowX: 'scroll', fontFamily: 'Monospace, sans-serif', overflowY: 'hidden'}}>
+            <div style = {{height: `${height}px`}} ref={elementRef} id = "parallax-page">
                 {/* First Page (6/30 UI and Battle System) */}
-                <div style = {{position: "absolute"}}>
+                <div style = {{position: "absolute", width: `1800px`}}>
                     {/* Slope Design and Header */}
                     <div style = {{position: "absolute"}}>
                         <div className = {'slopeBegin'} style = {{backgroundColor: blue}}>
@@ -49,7 +51,7 @@ export default function Page() {
                         </div>
                     </div>
                     {/* Content */}
-                    <div className= {'slopeContent'} style = {{display: 'block', position: "absolute", zIndex: "1", overflowX: 'scroll', width: '1900px', overflowY: 'hidden'}}>
+                    <div className= {'slopeContent'} style = {{display: 'block', position: "absolute", zIndex: "1", overflowX: 'scroll', width: `1800px`, overflowY: 'hidden'}}>
                         <div style = {{position: 'absolute'}}>
                             <div style={{ marginLeft: '720px', width: '850px', marginTop: '50px', height: '350px'}}>
                                 <h1 style={{color: white, paddingTop: '10px', fontSize: '34px', paddingBottom: '0px'}}>
@@ -81,7 +83,7 @@ export default function Page() {
                             </div>
                         </div>
                         <div className = {'slopeEnd'} style = {{backgroundColor: blue+'aa', display: 'block', position: "absolute"}}/>
-                        <div style = {{marginLeft: '1900px', position: "absolute"}}>
+                        <div style = {{marginLeft: `1800px`, position: "absolute"}}>
                             <div className = {'slopeBegin'} style = {{backgroundColor: blue+'aa', display: 'block', position: "absolute"}}/>
                                 <div style={{ marginLeft: '720px', width: '850px', marginTop: '50px', height: '350px'}}>
                                     <h1 style={{color: white, paddingTop: '10px', fontSize: '34px', paddingBottom: '0px'}}>
@@ -112,7 +114,7 @@ export default function Page() {
                     <div className = {'slopeEnd'} style = {{backgroundColor: green}}/>
                 </div>
                 {/* Second Page (6/30 UI and Battle System) */}
-                <div style = {{position: "absolute", marginLeft: '1900px'}}>
+                <div style = {{position: "absolute", marginLeft: `1800px`, width: `1800px`}}>
                     {/* Slope Design and Header */}
                     <div style = {{position: "absolute"}}>
                         <div className = {'slopeBegin'} style = {{backgroundColor: green}}>
@@ -125,7 +127,7 @@ export default function Page() {
                         </div>
                     </div>
                     {/* Content */}
-                    <div className= {'slopeContent'} style = {{display: 'block', position: "absolute", zIndex: "1", overflowX: 'scroll', width: '1900px', overflowY: 'hidden'}}>
+                    <div className= {'slopeContent'} style = {{display: 'block', position: "absolute", zIndex: "1", overflowX: 'scroll', width: `1800px`, overflowY: 'hidden'}}>
                         <div style = {{position: 'absolute'}}>
                             <div style={{ marginLeft: '720px', width: '850px', marginTop: '50px', height: '350px'}}>
                                 {/* <h1 style={{color: white, paddingTop: '10px', fontSize: '34px', paddingBottom: '0px'}}>
@@ -157,7 +159,7 @@ export default function Page() {
                             </div>
                         </div>
                         <div className = {'slopeEnd'} style = {{backgroundColor: green+'aa', display: 'block', position: "absolute"}}/>
-                        <div style = {{marginLeft: '1900px', position: "absolute"}}>
+                        <div style = {{marginLeft: `1800px`, position: "absolute"}}>
                             <div className = {'slopeBegin'} style = {{backgroundColor: green+'aa', display: 'block', position: "absolute"}}/>
                                 <div style={{ marginLeft: '720px', width: '850px', marginTop: '50px', height: '350px'}}>
                                     {/* <h1 style={{color: white, paddingTop: '10px', fontSize: '34px', paddingBottom: '0px'}}>
@@ -186,7 +188,7 @@ export default function Page() {
                     <div className = {'slopeEnd'} style = {{backgroundColor: purple}}/>
                 </div>
                 {/* Third Page (6/30 UI and Battle System) */}
-                <div style = {{position: "absolute", marginLeft: '3800px'}}>
+                <div style = {{position: "absolute", marginLeft: `3600px`, width: `1800px`}}>
                     {/* Slope Design and Header */}
                     <div style = {{position: "absolute"}}>
                         <div className = {'slopeBegin'} style = {{backgroundColor: purple}}>
@@ -199,7 +201,7 @@ export default function Page() {
                         </div>
                     </div>
                     {/* Content */}
-                    <div className= {'slopeContent'} style = {{display: 'block', position: "absolute", zIndex: "2", overflowX: 'scroll', width: '1900px', overflowY: 'hidden'}}>
+                    <div className= {'slopeContent'} style = {{display: 'block', position: "absolute", zIndex: "2", overflowX: 'scroll', width: `1800px`, overflowY: 'hidden'}}>
                         <div style = {{position: 'absolute'}}>
                             <div style={{ marginLeft: '720px', width: '850px', marginTop: '50px', height: '350px'}}>
                                 {/* <h1 style={{color: white, paddingTop: '10px', fontSize: '34px', paddingBottom: '0px'}}>
@@ -231,7 +233,7 @@ export default function Page() {
                             </div>
                         </div>
                         <div className = {'slopeEnd'} style = {{backgroundColor: purple+'aa', display: 'block', position: "absolute"}}/>
-                        <div style = {{marginLeft: '1900px', position: "absolute"}}>
+                        <div style = {{marginLeft: `1800px`, position: "absolute"}}>
                             <div className = {'slopeBegin'} style = {{backgroundColor: purple+'aa', display: 'block', position: "absolute"}}/>
                                 <div style={{ marginLeft: '720px', width: '850px', marginTop: '50px', height: '350px'}}>
                                     {/* <h1 style={{color: white, paddingTop: '10px', fontSize: '34px', paddingBottom: '0px'}}>
@@ -257,6 +259,7 @@ export default function Page() {
                                 </div>
                         </div>
                     </div>
+                    <div className = 'slopeEnd' style = {{backgroundColor: purple}}></div>
                 </div>
             </div>
         </div>

@@ -145,36 +145,39 @@
 }
 
 .slopeBegin {
-  clip-path: polygon(0px 0px, 680px 0px, 260px 800px, 0px 800px);
+  clip-path: polygon(0px 0px, 700px 0px, 300px 800px, 0px 800px);
 }
 
 .slopeEnd {
-  clip-path: polygon(1780px 0, 1900px 0px, 1900px 800px, 1360px 100%);
+  clip-path: polygon(1800px 0, 1800px 0px, 1800px 800px, 1400px 100%);
 }
 .slopeContent {
-  clip-path: polygon(680px 0px, 1780px 0px, 1360px 800px, 260px 800px);
+  clip-path: polygon(700px 0px, 1800px 0px, 1400px 800px, 300px 800px);
 }
 
 .slopeBegin,
 .slopeEnd,
 .slopeContent {
   position: absolute;
-  width: 1900px;
+  width: 1800px;
   height: 800px;
   cursor: pointer;
 }
 
 @media (max-width: 1125px) {
   .menu {
+    border: white;
+    border-style: solid;
     display: none !important;
     flex-direction: column;
     position: absolute;
-    top: 150px;
-    right: 10px;
+    top: 50%;
+    width: 50%;
+    right: calc(5% + 35px);
     background: #1a1a2a;
-    padding: 20px;
+    padding: 10px;
     padding-right: 60px;
-    border-radius: 5px;
+    border-radius: 10px;
   }
 
   .menu.open {
@@ -184,7 +187,26 @@
   .hamburger {
     display: flex !important;
   }
+
+  .navhr.open {
+    display: flex !important;
+    padding: 0%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: -20px;
+    margin-right: -60px;
+    width: 100%;
+    border-color: white;
+    height:0px;
+    border-top:1px
+  }
 }
+.navhr.closed {
+    margin-left:5%;
+    border-color: #1a1a2a;
+    border-bottom:0px;
+    height:0px;
+  }
 
 .menuNavBar {
   display: flex;

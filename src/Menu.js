@@ -1,8 +1,18 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './App.css'
 import App, { PageName } from './App.js';
 export default function Page({setCurrentPage}) {
     const [menuOpen, setMenuOpen] = useState(false);
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth > 1125) {
+            setMenuOpen(false)
+            }
+        }
+
+        window.addEventListener("resize", handleResize)
+        return () => window.removeEventListener("resize", handleResize)
+    }, [])
     return (
         <nav
       style={{
@@ -47,8 +57,11 @@ export default function Page({setCurrentPage}) {
                         {/* Menu Links */}
                         <div className={`menu ${menuOpen ? 'open' : ''}`} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
                             <button className="my-button" onClick={() => {setCurrentPage(PageName.RESUME); setMenuOpen(false)}}>r é s u m é</button>
+                            {menuOpen && <hr className="navhr open" />}
                             <button className="my-button" onClick={() => {setCurrentPage(PageName.PROJECTS); setMenuOpen(false)}}>p r o j e c t s</button>
+                            {menuOpen && <hr className="navhr open" />}
                             <button className="my-button" onClick={() => {setCurrentPage(PageName.DEVLOG); setMenuOpen(false)}}>d e v l o g</button>
+                            {menuOpen && <hr className="navhr open" />}
                             <button className="my-button" onClick={() => {setCurrentPage(PageName.CONTACT); setMenuOpen(false)}}>c o n t a c t</button>
                         </div>
                     </div>

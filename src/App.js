@@ -5,6 +5,7 @@ import Menu from './Menu.js';
 import Contact from './ContactFooter.js';
 import Resume from './Resume.js';
 import ContactPage from './Contact.js'
+import Projects from './Projects.js'
 
 export const PageName = {
   HOME: "home", // or any value you want
@@ -22,10 +23,11 @@ function App() {
         return <Resume setCurrentPage={setCurrentPage} />;
       case PageName.DEVLOG:
         return <DevLog setCurrentPage={setCurrentPage} />;
-      // case PageName.CONTACT:
-      //   return <ContactPage setCurrentPage = {setCurrentPage} />
+      case PageName.CONTACT:
+        return <ContactPage setCurrentPage = {setCurrentPage} />
+      case PageName.PROJECTS:
+        return <Projects setCurrentPage = {setCurrentPage} />
       case PageName.HOME:
-        return <Home setCurrentPage={setCurrentPage} />;
       default:
         return <Home setCurrentPage={setCurrentPage} />;
     }
