@@ -18,14 +18,13 @@ export default function Page() {
       />
 
       <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '925px', margin: '0', overflow: 'hidden'}}>
-        <div style={{display: 'flex', width: '800px', height: '500px', backgroundColor: '#fafaff', color: '#1a1a2a', fontFamily: 'Oxygen', position: 'relative', padding: '15px', borderRadius: '10px'}}>
+        <div style={{display: 'flex', alignItems: 'center', width: '800px', height: '500px', backgroundColor: '#fafaff', color: '#1a1a2a', fontFamily: 'Oxygen', position: 'relative', padding: '15px', borderRadius: '10px'}}>
         <img
           src={Shifen}
           alt="Shifen Waterfall"
           style={{
-            height: '100%',
+            height: '500px',
             width: 'auto',
-            top: 0,
             left: 0,
           }}
         />
@@ -33,7 +32,7 @@ export default function Page() {
         <h1 style={{padding: '10px', textAlign: 'left', color: '#1a1a2a', fontSize: '30px', fontWeight: 'bold', fontFamily: 'MonoSpace' }}>
           Hi! I'm Matthew Pun
           <br/><br/>
-          <p style={{fontSize: '17px', fontWeight: 'normal', marginTop: '10px', color: '#1a1a2a', lineHeight: '2', overflow: 'hidden', maxHeight: '350px'}}>
+          <p style={{fontSize: '17px', fontWeight: 'normal', marginTop: '10px', color: '#1a1a2a', lineHeight: '2', overflow: 'scroll', maxHeight: '300px'}}>
             Welcome to my portfolio! 
             
             I am currently a student at Pennsylvania State University, pursuing a degree in Computer Science. 

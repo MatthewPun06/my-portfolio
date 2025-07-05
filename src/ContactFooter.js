@@ -17,7 +17,7 @@ export default function Page() {
         <div style={{color: '#fafaff', fontFamily: 'Monospace', position: 'relative', width : '100%', scrollbarGutter: 'stable', overflow: 'hidden'}}>
             <h1 style={{textAlign: 'center', paddingTop: '50px', fontSize: '34px', paddingBottom: '0px'}}>
                 Contact 
-                <hr style={{marginLeft: '120px', marginRight: '120px'}}/>
+                <hr style={{marginLeft: '5%', marginRight: '5%'}}/>
             </h1>
             <div style={{display: 'flex', justifyContent: 'right', flexDirection: 'column', alignItems: 'top', marginTop: '0px', padding: '20px'}}>
                     <form ref={form} onSubmit={sendEmail}>

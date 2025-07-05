@@ -38,18 +38,18 @@
 }
 
 .my-button {
-  margin-left : 30px;
-  margin-right: 30px;
   padding: 5px 0px;
+  width: 'auto';
+  height: 'auto';
   color: #fafaff;
   background-color: transparent;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
   font-family: monospace;
   font-weight: bold;
   font-size: 20px;
   transition: transform 0.3s;
+  margin-left: 40px;
 }
 
 /* 👆 Hover effect */
@@ -69,16 +69,19 @@
   font-weight: bold;
   color: #fafaff;
   width: 50%;
-  padding-left: 100px;
-  padding-right: 100px;
+  padding-left: 5%;
+  padding-right: 5%;
 
 }
 .textinput {
-  width: calc(100% - 200px - 20px);
-  padding: 10px;
+  width: calc(90% - 20px);
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   height: 20px;
-  margin-left: 100px;
-  margin-right: 100px;
+  margin-left: 5%;
+  margin-right: 5%;
 
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -92,8 +95,8 @@
 .textarea {
   width: 100%;
   height: 150px;
-  margin-left: 100px;
-  margin-right: 100px;
+  margin-left: 5%;
+  margin-right: 5%;
   padding: 10px;
   
   border: 1px solid #ccc;
@@ -142,17 +145,51 @@
 }
 
 .slopeBegin {
-  clip-path: polygon(0px 0px, 680px 0, 260px 100%, 0% 100%);
+  clip-path: polygon(0px 0px, 680px 0px, 260px 800px, 0px 800px);
 }
 
 .slopeEnd {
-  clip-path: polygon(1780px 0, 100% 0, 85% 100%, 1360px 100%);
+  clip-path: polygon(1780px 0, 1900px 0px, 1900px 800px, 1360px 100%);
+}
+.slopeContent {
+  clip-path: polygon(680px 0px, 1780px 0px, 1360px 800px, 260px 800px);
 }
 
 .slopeBegin,
-.slopeEnd {
+.slopeEnd,
+.slopeContent {
   position: absolute;
-  width: 170%;
-  height: 100%;
+  width: 1900px;
+  height: 800px;
   cursor: pointer;
+}
+
+@media (max-width: 1125px) {
+  .menu {
+    display: none !important;
+    flex-direction: column;
+    position: absolute;
+    top: 150px;
+    right: 10px;
+    background: #1a1a2a;
+    padding: 20px;
+    padding-right: 60px;
+    border-radius: 5px;
+  }
+
+  .menu.open {
+    display: flex !important;
+  }
+
+  .hamburger {
+    display: flex !important;
+  }
+}
+.menuNavBar {
+  display: flex;
+  justify-content: right;
+  width: calc(100% - 250px);
+}
+.parallaxScreen {
+  width: calc(100% + 3800px);
 }
