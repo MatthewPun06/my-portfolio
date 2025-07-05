@@ -47,7 +47,7 @@ export default function Page({setCurrentPage}) {
                         {/* Menu Links */}
                         <div className={`menu ${menuOpen ? 'open' : ''}`} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
                             <button className="my-button" onClick={() => {setCurrentPage(PageName.RESUME); setMenuOpen(false)}}>r é s u m é</button>
-                            <button className="my-button" onClick={() => {setCurrentPage(PageName.RESUME); setMenuOpen(false)}}>p r o j e c t s</button>
+                            <button className="my-button" onClick={() => {setCurrentPage(PageName.PROJECTS); setMenuOpen(false)}}>p r o j e c t s</button>
                             <button className="my-button" onClick={() => {setCurrentPage(PageName.DEVLOG); setMenuOpen(false)}}>d e v l o g</button>
                             <button className="my-button" onClick={() => {setCurrentPage(PageName.CONTACT); setMenuOpen(false)}}>c o n t a c t</button>
                         </div>

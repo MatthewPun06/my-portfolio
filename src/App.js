@@ -22,8 +22,8 @@ function App() {
         return <Resume setCurrentPage={setCurrentPage} />;
       case PageName.DEVLOG:
         return <DevLog setCurrentPage={setCurrentPage} />;
-      case PageName.CONTACT:
-        return <ContactPage setCurrentPage = {setCurrentPage} />
+      // case PageName.CONTACT:
+      //   return <ContactPage setCurrentPage = {setCurrentPage} />
       case PageName.HOME:
         return <Home setCurrentPage={setCurrentPage} />;
       default:
