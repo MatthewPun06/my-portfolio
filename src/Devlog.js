@@ -2,6 +2,7 @@ import React, { useRef, useEffect} from "react"
 import hometown from './assets/devlog/hometown.jpeg'
 import hometown2 from './assets/devlog/hometown2.jpeg'
 import hometownmap from './assets/devlog/hometownmap.jpeg'
+import partyswapping from './assets/devlog/PartySwapping.jpeg'
 import './App.css'
 const white = '#fafaff';
 const black = '#1a1a2a';
@@ -130,43 +131,43 @@ export default function Page() {
                     <div className= {'slopeContent'} style = {{display: 'block', position: "absolute", zIndex: "1", overflowX: 'scroll', width: `1800px`, overflowY: 'hidden'}}>
                         <div style = {{position: 'absolute'}}>
                             <div style={{ marginLeft: '720px', width: '850px', marginTop: '50px', height: '350px'}}>
-                                {/* <h1 style={{color: white, paddingTop: '10px', fontSize: '34px', paddingBottom: '0px'}}>
+                                <h1 style={{color: white, paddingTop: '10px', fontSize: '34px', paddingBottom: '0px'}}>
                                     Technical Updates:
                                 </h1>
                                 <ul style={{color: white, fontSize: '20px', paddingLeft: '20px'}}>
-                                    <li>Implemented a basic HUD with a minimap, location names, and placeholders for other UI elements</li>
+                                    <li>Added party member switching using Q and E</li>
                                     <br/>
-                                    <li>Outlined the main menu with basic components and drew concept art for its art direction.</li>
+                                    {/* <li> </li>
                                     <br/>
-                                    <li>Laid out the overhead for managing enemy interactions and starting combat</li>
+                                    <li> </li>
                                     <br/>
-                                    <li>Outlined the main parts and structure of the battle system and its combatants</li>
-                                </ul> */}
+                                    <li> </li> */}
+                                </ul>
                             </div>
                             <div style={{ marginLeft: '540px', width: '850px', marginBottom: '50px', height: '350px'}}>
-                                {/* <h1 style={{color: white, paddingTop: '10px', fontSize: '34px', paddingBottom: '0px'}}>
+                                <h1 style={{color: white, paddingTop: '10px', fontSize: '34px', paddingBottom: '0px'}}>
                                     Creative Updates:
                                 </h1>
                                 <ul style={{color: white, fontSize: '20px', paddingLeft: '20px'}}>
-                                    <li>Sketched key landmarks of the starting area including concept art for three settlements and a larger map of the entire area</li>
+                                    <li>Developed character flaws, beliefs, goals, and arcs</li>
                                     <br/>
-                                    <li>Organized and wrote the first 7 chapters of main story events</li>
+                                    {/* <li>Organized and wrote the first 7 chapters of main story events</li>
                                     <br/>
                                     <li>Continued adding depth to each of the 6 party members: their backgrounds, struggles, goals, personalities, and interactions</li>
                                     <br/>
-                                    <li>Created ability sets for each of the party members including two weapon types with 10 abilities for each weapon with unique effects</li>
-                                </ul> */}
+                                    <li>Created ability sets for each of the party members including two weapon types with 10 abilities for each weapon with unique effects</li> */}
+                                </ul>
                             </div>
                         </div>
                         <div className = {'slopeEnd'} style = {{backgroundColor: green+'aa', display: 'block', position: "absolute"}}/>
                         <div style = {{marginLeft: `1800px`, position: "absolute"}}>
                             <div className = {'slopeBegin'} style = {{backgroundColor: green+'aa', display: 'block', position: "absolute"}}/>
                                 <div style={{ marginLeft: '720px', width: '850px', marginTop: '50px', height: '350px'}}>
-                                    {/* <h1 style={{color: white, paddingTop: '10px', fontSize: '34px', paddingBottom: '0px'}}>
+                                    <h1 style={{color: white, paddingTop: '10px', fontSize: '34px', paddingBottom: '0px'}}>
                                         Visual Updates:
                                     </h1>
-                                    <img src = {hometown} style = {{height: '250px'}}/>
-                                    <img src = {hometown2} style = {{height: '250px'}}/>
+                                    <img src = {partyswapping} style = {{height: '250px'}}/>
+                                    {/* <img src = {hometown2} style = {{height: '250px'}}/>
                                     <img src = {hometownmap} style= {{height: '250px'}}/> */}
                                 </div>
                                 <div style={{ marginLeft: '540px', width: '850px', marginBottom: '50px', height: '350px'}}>
